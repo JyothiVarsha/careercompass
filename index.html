@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Compass | Early-Career Workplace Clarity</title>
+    <!-- Stylesheet link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ==========================================================================
+         TOP NAVIGATION BAR
+         Accessible, responsive navigation that stays fixed at the top of the page.
+         ========================================================================== -->
+    <header class="app-header">
+        <div class="header-container">
+            <!-- Brand Logo & Title -->
+            <a href="#" class="brand-link" data-target="dashboard-view" aria-label="Career Compass Home">
+                <span class="brand-icon" aria-hidden="true">🧭</span>
+                <div class="brand-text">
+                    <span class="brand-name">Career Compass</span>
+                    <span class="brand-tagline">Early-Career Workplace Clarity</span>
+                </div>
+            </a>
+
+            <!-- Mobile Navigation Toggle Button -->
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="primary-nav" aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li>
+                        <button class="nav-link active" data-target="dashboard-view" aria-current="page">
+                            Dashboard
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" data-target="imposter-shield-view">
+                            Imposter Shield
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" data-target="workplace-simulator-view">
+                            Workplace Simulator
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-link" data-target="skill-pivot-view">
+                            Skill-Pivot Engine
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Privacy Status Indicator -->
+            <div class="privacy-badge" title="All processing happens on your computer. No data is sent to external servers.">
+                <span class="status-dot"></span>
+                <span>100% Client-Side & Private</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+         MAIN APPLICATION CONTENT
+         Contains all views. JavaScript toggles the active view by adding/removing
+         the 'active-view' and 'hidden-view' CSS classes.
+         ========================================================================== -->
+    <main class="app-main" id="main-content">
+
+        <!-- ======================================================================
+             VIEW 1: DASHBOARD / WELCOME VIEW (Active by default)
+             ====================================================================== -->
+        <section id="dashboard-view" class="view-section active-view" aria-labelledby="welcome-heading">
+            
+            <!-- Welcome / Hero Section -->
+            <div class="hero-card">
+                <div class="hero-content">
+                    <span class="badge badge-accent">Built for Students, Interns &amp; Fresh Graduates</span>
+                    <h1 id="welcome-heading" class="hero-title">Navigate your early career with confidence and clarity.</h1>
+                    <p class="hero-description">
+                        Starting your first job or internship can feel overwhelming. Corporate emails can sound cryptic, workplace expectations are rarely spelled out, and translating your academic degree into a real-world career path can feel impossible. 
+                        <strong>Career Compass</strong> provides practical, low-pressure tools to help you build workplace resilience and take action.
+                    </p>
+                    
+                    <!-- Transparency & Ethical Statement -->
+                    <div class="transparency-note" role="note">
+                        <span class="info-icon" aria-hidden="true">💡</span>
+                        <p>
+                            <strong>Transparent &amp; Private:</strong> Career Compass uses structured educational heuristics and practical decision frameworks. It runs <em>100% locally in your browser</em> — your messages are never stored or transmitted to external servers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modules Grid Section -->
+            <div class="modules-section">
+                <div class="section-header">
+                    <h2>Explore the Three Modules</h2>
+                    <p>Select a tool below to jump into targeted practice or guidance.</p>
+                </div>
+
+                <div class="cards-grid">
+                    
+                    <!-- Card 1: Imposter Shield -->
+                    <article class="module-card">
+                        <div class="card-header">
+                            <span class="card-icon" aria-hidden="true">🛡️</span>
+                            <span class="card-badge">Module 1</span>
+                        </div>
+                        <h3 class="card-title">Imposter Shield</h3>
+                        <p class="card-subtitle">Plain-English Workplace Email Decoder</p>
+                        <p class="card-body">
+                            Translates confusing, passive-aggressive, or vague workplace messages into straightforward English. It pinpoints the exact action expected from you and provides a manageable 15-minute micro-task to break executive paralysis.
+                        </p>
+                        <ul class="card-features">
+                            <li>Deconstructs confusing corporate jargon</li>
+                            <li>Identifies actual deadlines and deliverables</li>
+                            <li>Suggests a 15-minute quick-start micro-task</li>
+                        </ul>
+                        <div class="card-footer">
+                            <button class="btn btn-primary" data-target="imposter-shield-view">
+                                Launch Imposter Shield &rarr;
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Workplace Simulator -->
+                    <article class="module-card">
+                        <div class="card-header">
+                            <span class="card-icon" aria-hidden="true">💼</span>
+                            <span class="card-badge">Module 2</span>
+                        </div>
+                        <h3 class="card-title">Workplace Simulator</h3>
+                        <p class="card-subtitle">Low-Stakes Scenario Practice &amp; Feedback</p>
+                        <p class="card-body">
+                            Presents realistic workplace dilemmas — such as missing a project deadline or receiving tough critical feedback. Write your response and receive structured evaluation across four core professional competencies.
+                        </p>
+                        <ul class="card-features">
+                            <li>Realistic workplace dilemma scenarios</li>
+                            <li>Feedback on Communication &amp; Accountability</li>
+                            <li>Guidance on Judgment &amp; Adaptability</li>
+                        </ul>
+                        <div class="card-footer">
+                            <button class="btn btn-primary" data-target="workplace-simulator-view">
+                                Launch Simulator &rarr;
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Skill-Pivot Engine -->
+                    <article class="module-card">
+                        <div class="card-header">
+                            <span class="card-icon" aria-hidden="true">🧭</span>
+                            <span class="card-badge">Module 3</span>
+                        </div>
+                        <h3 class="card-title">Skill-Pivot Engine</h3>
+                        <p class="card-subtitle">Degree-to-Career Pathway Mapper</p>
+                        <p class="card-body">
+                            Takes your degree background, natural interests, and current skills to suggest realistic career pathways. Discovers your transferable strengths and outlines tangible, low-cost portfolio projects to prove your ability.
+                        </p>
+                        <ul class="card-features">
+                            <li>Translates any degree to realistic entry roles</li>
+                            <li>Identifies transferable strengths and skill gaps</li>
+                            <li>Provides hands-on portfolio project blueprints</li>
+                        </ul>
+                        <div class="card-footer">
+                            <button class="btn btn-primary" data-target="skill-pivot-view">
+                                Launch Skill-Pivot &rarr;
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Quick Guidance / Tips Banner -->
+            <aside class="tips-banner">
+                <div class="tips-content">
+                    <h3>💡 Beginner's Tip for Workplace Communication</h3>
+                    <p>
+                        When a coworker or manager sends a short or vague request, it usually reflects their busy schedule, not disappointment in your work. Taking a breath and asking a clarifying question is always a sign of seniority, not weakness.
+                    </p>
+                </div>
+            </aside>
+        </section>
+
+        <!-- ======================================================================
+             VIEW 2: IMPOSTER SHIELD (Fully Implemented in Phase 2)
+             ====================================================================== -->
+        <section id="imposter-shield-view" class="view-section hidden-view" aria-labelledby="imposter-shield-heading">
+            <div class="view-nav-bar">
+                <button class="btn btn-secondary back-to-dashboard-btn" data-target="dashboard-view">
+                    &larr; Back to Dashboard
+                </button>
+                <span class="view-stage-pill status-ready">Module Active &bull; 100% Client-Side</span>
+            </div>
+
+            <div class="module-view-header">
+                <div class="module-title-wrapper">
+                    <span class="module-icon" aria-hidden="true">🛡️</span>
+                    <div>
+                        <h1 id="imposter-shield-heading" class="module-heading">Imposter Shield</h1>
+                        <p class="module-subheading">
+                            Decode confusing workplace emails, uncover actual expectations, and get a manageable 15-minute quick-start task.
+                        </p>
+                    </div>
+                </div>
+                <div class="privacy-notice-inline" role="note">
+                    <span class="privacy-icon" aria-hidden="true">🔒</span>
+                    <span><strong>Private &amp; Local:</strong> Your text never leaves this browser tab. No external APIs or remote databases are used.</span>
+                </div>
+            </div>
+
+            <!-- Predefined Examples Selector -->
+            <div class="examples-panel">
+                <div class="examples-panel-header">
+                    <span class="examples-label">Select a realistic workplace message to test:</span>
+                    <span class="examples-count">6 Pre-loaded Scenarios</span>
+                </div>
+                <div class="examples-chip-grid" id="shield-examples-grid" role="group" aria-label="Predefined workplace messages">
+                    <!-- Populated dynamically via script.js for clean maintenance -->
+                </div>
+            </div>
+
+            <!-- Input & Form Section -->
+            <div class="shield-form-card">
+                <!-- Validation Message Container -->
+                <div id="shield-validation-alert" class="validation-alert" role="alert" style="display: none;">
+                    <span class="alert-icon" aria-hidden="true">⚠️</span>
+                    <span id="shield-validation-text">Please enter or select a workplace message to explain.</span>
+                </div>
+
+                <div class="form-row form-meta-row">
+                    <!-- Sender Context -->
+                    <div class="form-group">
+                        <label for="shield-sender-role" class="form-label">Sender Relationship (Optional):</label>
+                        <select id="shield-sender-role" class="form-select">
+                            <option value="colleague" selected>Colleague / Peer</option>
+                            <option value="manager">Manager / Team Lead</option>
+                            <option value="client">Client / External Stakeholder</option>
+                            <option value="executive">Senior Executive / Director</option>
+                        </select>
+                    </div>
+
+                    <!-- Tone Selector -->
+                    <div class="form-group">
+                        <label for="shield-tone-select" class="form-label">Perceived Message Tone:</label>
+                        <select id="shield-tone-select" class="form-select">
+                            <option value="auto">Auto-Detect from Message</option>
+                            <option value="Professional">Professional &amp; Standard</option>
+                            <option value="Urgent">Urgent / High-Pressure</option>
+                            <option value="Vague">Vague / Ambiguous</option>
+                            <option value="Critical">Critical / Pushback</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <div class="textarea-header">
+                        <label for="shield-input-text" class="form-label">Paste Confusing Workplace Message:</label>
+                        <span id="shield-char-count" class="char-count" aria-live="polite">0 / 2,500 characters</span>
+                    </div>
+                    <textarea 
+                        id="shield-input-text" 
+                        class="form-textarea" 
+                        rows="5" 
+                        maxlength="2500" 
+                        placeholder="Paste an email, Slack ping, or client note here (e.g., 'Per my previous email, we still haven't received the Q3 analytics report. Thoughts?')..."></textarea>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="form-actions-row">
+                    <button id="shield-analyze-btn" class="btn btn-primary btn-lg">
+                        <span aria-hidden="true">🔍</span> Explain This Message
+                    </button>
+                    <button id="shield-clear-btn" class="btn btn-secondary">
+                        <span aria-hidden="true">✕</span> Clear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Section (Hidden until analyzed) -->
+            <div id="shield-results-container" class="shield-results-card" style="display: none;" aria-live="polite">
+                <!-- Results Header with Transparency Tag -->
+                <div class="results-header">
+                    <div class="results-title-group">
+                        <span class="results-status-badge">Analysis Complete</span>
+                        <h2 class="results-title">Message Breakdown &amp; Action Plan</h2>
+                    </div>
+                    <div class="results-methodology-note">
+                        <span class="methodology-icon">💡</span>
+                        <span>Transparent Rule-Based Heuristic Analysis &bull; No Generative AI</span>
+                    </div>
+                </div>
+
+                <!-- Detected Tone & Summary Bar -->
+                <div class="results-summary-strip" id="shield-summary-strip">
+                    <!-- Populated dynamically via script.js -->
+                </div>
+
+                <!-- The 5 Required Result Sections -->
+                <div class="results-sections-list">
+                    
+                    <!-- 1. Plain-English Meaning -->
+                    <article class="result-block block-meaning">
+                        <div class="result-block-header">
+                            <span class="block-number">1</span>
+                            <span class="block-icon">📖</span>
+                            <h3>Plain-English Meaning</h3>
+                        </div>
+                        <div class="result-block-body" id="shield-result-meaning">
+                            <!-- Injected by script.js -->
+                        </div>
+                    </article>
+
+                    <!-- 2. What They Expect -->
+                    <article class="result-block block-expectations">
+                        <div class="result-block-header">
+                            <span class="block-number">2</span>
+                            <span class="block-icon">🎯</span>
+                            <h3>What They Expect</h3>
+                        </div>
+                        <div class="result-block-body" id="shield-result-expectations">
+                            <!-- Injected by script.js -->
+                        </div>
+                    </article>
+
+                    <!-- 3. Action Plan -->
+                    <article class="result-block block-action-plan">
+                        <div class="result-block-header">
+                            <span class="block-number">3</span>
+                            <span class="block-icon">📋</span>
+                            <h3>Action Plan</h3>
+                        </div>
+                        <div class="result-block-body" id="shield-result-action-plan">
+                            <!-- Injected by script.js -->
+                        </div>
+                    </article>
+
+                    <!-- 4. 15-Minute Starter Task -->
+                    <article class="result-block block-starter-task">
+                        <div class="result-block-header">
+                            <span class="block-number">4</span>
+                            <span class="block-icon">⏱️</span>
+                            <h3>15-Minute Starter Task</h3>
+                            <span class="block-tag">Anxiety Reducer</span>
+                        </div>
+                        <div class="result-block-body" id="shield-result-starter-task">
+                            <!-- Injected by script.js -->
+                        </div>
+                    </article>
+
+                    <!-- 5. Suggested Reply -->
+                    <article class="result-block block-suggested-reply">
+                        <div class="result-block-header">
+                            <div class="header-left">
+                                <span class="block-number">5</span>
+                                <span class="block-icon">✉️</span>
+                                <h3>Suggested Reply</h3>
+                            </div>
+                            <button id="shield-copy-reply-btn" class="btn btn-secondary btn-sm copy-btn" title="Copy reply to clipboard">
+                                <span class="copy-icon">📋</span> <span id="copy-btn-text">Copy Draft</span>
+                            </button>
+                        </div>
+                        <div class="result-block-body">
+                            <p class="reply-hint">You can customize this draft to match your personal style before sending:</p>
+                            <div class="reply-box-wrapper">
+                                <textarea id="shield-suggested-reply" class="reply-textarea" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Bottom Actions -->
+                <div class="results-footer">
+                    <button class="btn btn-secondary" id="shield-reset-scroll-btn">
+                        &uarr; Edit Message or Try Another
+                    </button>
+                    <button class="btn btn-secondary back-to-dashboard-btn" data-target="dashboard-view">
+                        &larr; Back to Dashboard
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             VIEW 3: WORKPLACE SIMULATOR (Placeholder View)
+             ====================================================================== -->
+        <section id="workplace-simulator-view" class="view-section hidden-view" aria-labelledby="simulator-heading">
+            <div class="view-nav-bar">
+                <button class="btn btn-secondary back-to-dashboard-btn" data-target="dashboard-view">
+                    &larr; Back to Dashboard
+                </button>
+                <span class="view-stage-pill">Phase 3 Module</span>
+            </div>
+
+            <div class="placeholder-container">
+                <div class="placeholder-icon" aria-hidden="true">💼</div>
+                <h1 id="simulator-heading" class="placeholder-title">Workplace Simulator</h1>
+                <p class="placeholder-subtitle">Safe Practice for High-Pressure Workplace Conversations</p>
+                
+                <div class="placeholder-box">
+                    <div class="status-indicator-tag">
+                        <span class="tag-pulse"></span>
+                        <span>Foundation Active &bull; Ready for Phase 3 Implementation</span>
+                    </div>
+
+                    <p class="placeholder-description">
+                        This module will present realistic workplace dilemmas you might encounter as an intern or junior employee. 
+                        You will write how you would handle each situation and receive structured, constructive feedback across four key workplace competencies.
+                    </p>
+
+                    <div class="features-preview-grid">
+                        <div class="preview-item">
+                            <h4>💬 Communication</h4>
+                            <p>Evaluates tone, clarity, and whether your message clearly outlines solutions rather than just problems.</p>
+                        </div>
+                        <div class="preview-item">
+                            <h4>🤝 Accountability</h4>
+                            <p>Checks how you take ownership of outcomes without becoming defensive or overly apologetic.</p>
+                        </div>
+                        <div class="preview-item">
+                            <h4>⚖️ Judgment</h4>
+                            <p>Helps you practice knowing when to escalate an issue and how to prioritize realistic next steps.</p>
+                        </div>
+                        <div class="preview-item">
+                            <h4>🌱 Adaptability</h4>
+                            <p>Assesses your ability to stay constructive and flexible when project parameters suddenly change.</p>
+                        </div>
+                    </div>
+
+                    <div class="placeholder-actions">
+                        <button class="btn btn-primary back-to-dashboard-btn" data-target="dashboard-view">
+                            Return to Dashboard
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             VIEW 4: SKILL-PIVOT ENGINE (Placeholder View)
+             ====================================================================== -->
+        <section id="skill-pivot-view" class="view-section hidden-view" aria-labelledby="skill-pivot-heading">
+            <div class="view-nav-bar">
+                <button class="btn btn-secondary back-to-dashboard-btn" data-target="dashboard-view">
+                    &larr; Back to Dashboard
+                </button>
+                <span class="view-stage-pill">Phase 4 Module</span>
+            </div>
+
+            <div class="placeholder-container">
+                <div class="placeholder-icon" aria-hidden="true">🧭</div>
+                <h1 id="skill-pivot-heading" class="placeholder-title">Skill-Pivot Engine</h1>
+                <p class="placeholder-subtitle">Realistic Pathways, Transferable Skills &amp; Portfolio Blueprints</p>
+                
+                <div class="placeholder-box">
+                    <div class="status-indicator-tag">
+                        <span class="tag-pulse"></span>
+                        <span>Foundation Active &bull; Ready for Phase 4 Implementation</span>
+                    </div>
+
+                    <p class="placeholder-description">
+                        Many graduates feel their degree limits them to one strict track. This module uses a curated matching matrix 
+                        to map your degree, strengths, and preferences to real-world career roles, identifying transferable skills you already possess.
+                    </p>
+
+                    <div class="features-preview-grid">
+                        <div class="preview-item">
+                            <h4>🗺️ Realistic Pathways</h4>
+                            <p>Suggests viable entry-level roles suited to your academic background and interests.</p>
+                        </div>
+                        <div class="preview-item">
+                            <h4>✨ Transferable Skills</h4>
+                            <p>Translates academic work (e.g. research, presentations) into workplace language hiring managers value.</p>
+                        </div>
+                        <div class="preview-item">
+                            <h4>🎯 Practical Skill Gaps</h4>
+                            <p>Outlines specific, low-friction topics to learn next without needing paid bootcamps or certificates.</p>
+                        </div>
+                        <div class="preview-item">
+                            <h4>📁 Portfolio Project Blueprints</h4>
+                            <p>Provides concrete project ideas you can build independently to showcase real evidence of your skills.</p>
+                        </div>
+                    </div>
+
+                    <div class="placeholder-actions">
+                        <button class="btn btn-primary back-to-dashboard-btn" data-target="dashboard-view">
+                            Return to Dashboard
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+         APPLICATION FOOTER
+         Provides information about project privacy, architecture, and licensing.
+         ========================================================================== -->
+    <footer class="app-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">🧭 Career Compass</span>
+                <p>Empowering early-career professionals to succeed with clarity, confidence, and resilience.</p>
+            </div>
+            <div class="footer-meta">
+                <p class="footer-privacy-text">
+                    🔒 <strong>Privacy Guaranteed:</strong> Client-side only. Zero trackers, zero cookies, zero external API calls.
+                </p>
+                <p class="footer-copy">
+                    &copy; 2026 Career Compass &bull; Built with standard HTML, CSS &amp; Vanilla JavaScript.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanilla JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
